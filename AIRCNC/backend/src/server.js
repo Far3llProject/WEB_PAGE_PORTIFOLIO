@@ -23,7 +23,7 @@ app.use(routes);
 //definir a porta que vai executar a aplicação
 app.listen(3333);
 
-//add nodemon apenas no desenvolvimento > yarn dev para iniciar o servidor 
-//add mongoose
+//add nodemon apenas no desenvolvimento -> yarn dev para iniciar o servidor no terminal
+//add mongoose 
 //node src/server.js para iniciar o servidor 
-//
+//add multer ( faz com que o express entenda o post com uploads de diversas informações incluindo imagens)

@@ -7,8 +7,12 @@ const SpotSchema = new mongoose.Schema({
   company: String,
   price: Number,
   techs: [String], //array de strings
+  //guardando somente o id de quem criou o spot
+  //como é um banco não-relacional isso aqui cria-se uma relação praticamente manual podendo depois
+  //listar todos os spots cadastrados pelo mesmo id 
   user: {
-      type: mongoose.Schema
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
   }
         
 });

@@ -1,5 +1,8 @@
-// index(criando um metodo que retorna uma listagem), show(retorna uma unica Session), store(criar uma Session), 
-// update, destroy
+// index(criando um metodo que retorna uma listagem), 
+// show(retorna uma unica Session), 
+// store(criar um novo registro), 
+// update e destroy
+
 //criando um usuário pegando do modelo
 const User = require('../models/User');
 
@@ -15,3 +18,4 @@ async store(req, res){
     return res.json(user);
     }
 };
+
