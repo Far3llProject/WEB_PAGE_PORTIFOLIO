@@ -6,7 +6,6 @@
 //criando um usuário pegando do modelo
 const User = require('../models/User');
 
-
 module.exports = {
 async store(req, res){
     const email = req.body.email;
