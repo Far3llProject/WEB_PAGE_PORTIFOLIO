@@ -1,0 +1,477 @@
+@charset "UTF-8";
+/*mudar de px par vh*/
+.Header {
+  position: fixed;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #3c3c3c;
+  -webkit-box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  z-index: -2;
+}
+
+@media (max-width: 900px) {
+  .Header {
+    background: #fff;
+  }
+}
+
+/* Hover Menu*/
+.Header:hover {
+  width: 18vh;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #3c3c3c;
+}
+
+.Header:hover .Home ul li a h3 {
+  opacity: 1;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.Header:hover .Perfil ul li a h3 {
+  opacity: 1;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.Header:hover .Portfólio ul li a h3 {
+  opacity: 1;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+* {
+  width: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1c1d37;
+  background: url(../img/fundo.jpg) no-repeat fixed;
+  background-size: cover;
+}
+
+.texthome {
+  position: relative;
+  top: 8em;
+  right: -30px;
+  width: 150vh;
+  height: 12vh;
+  z-index: -3;
+}
+
+.texthome h3 {
+  top: -47px;
+  display: inline;
+  position: relative;
+  right: -200px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.texthome h1 {
+  display: inline;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 5.6em;
+  top: -39px;
+  color: white;
+  right: -197px;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.texthome p {
+  display: inline;
+  position: relative;
+  right: -200px;
+  text-transform: uppercase;
+  font-size: 2.6em;
+  top: -28px;
+  color: orange;
+  text-shadow: 10px 10px 8px rgba(0, 0, 0, 0.8);
+}
+
+.copyright {
+  position: fixed;
+  width: 310px;
+  height: 22px;
+  top: 96vh;
+  right: 2vh;
+  z-index: 1;
+}
+
+.copyright p {
+  display: inline;
+  color: white;
+}
+
+.botao {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 97vh;
+  top: 9vh;
+  right: -39vh;
+}
+
+.botao .skewBtn {
+  width: 180px;
+  height: 80px;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 24px;
+  border-radius: 5px;
+  font-family: "Lato",sans-serif;
+}
+
+.botao .skewBtn:hover {
+  border: none;
+  color: white;
+  font-size: 28px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/* Buttons */
+.purple {
+  border: 2px solid #ff8000;
+  color: #ff8000;
+}
+
+.purple:hover {
+  background-color: #ff8000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*Itens do Menu*/
+.Home {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 12%;
+  background: #2d2d2d;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.Home ul li {
+  list-style: none;
+}
+
+.Home ul li a {
+  text-decoration: none;
+}
+
+.Home ul li a img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.5;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
+  top: -3px;
+}
+
+.Home ul li a h3 {
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  position: relative;
+  top: -16px;
+  right: 1.8em;
+  text-transform: uppercase;
+  font-size: 2.4vh;
+}
+
+.Perfil {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 12%;
+  background: #2d2d2d;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.Perfil ul li {
+  list-style: none;
+}
+
+.Perfil ul li a {
+  text-decoration: none;
+}
+
+.Perfil ul li a img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.5;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
+  top: -3px;
+}
+
+.Perfil ul li a h3 {
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  position: relative;
+  top: -16px;
+  right: 5vh;
+  text-transform: uppercase;
+  font-size: 2.4vh;
+}
+
+.Portfólio {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 12%;
+  background: #2d2d2d;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.Portfólio ul li {
+  list-style: none;
+}
+
+.Portfólio ul li a {
+  text-decoration: none;
+}
+
+.Portfólio ul li a img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.5;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
+  top: -3px;
+}
+
+.Portfólio ul li a h3 {
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  position: relative;
+  top: -16px;
+  right: 8vh;
+  text-transform: uppercase;
+  font-size: 2.4vh;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*Efeito Brilho*/
+.Home::before {
+  content: '';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: -150px;
+  width: 30%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.8)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  -webkit-transform: skewX(35deg);
+          transform: skewX(35deg);
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.Home:Hover:before {
+  left: calc(100% + 100px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.Perfil::before {
+  content: '';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: -150px;
+  width: 30%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.8)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  -webkit-transform: skewX(35deg);
+          transform: skewX(35deg);
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.Perfil:Hover:before {
+  left: calc(100% + 100px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.Portfólio::before {
+  content: '';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: -150px;
+  width: 30%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.8)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  -webkit-transform: skewX(35deg);
+          transform: skewX(35deg);
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.Portfólio:Hover:before {
+  left: calc(100% + 100px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*Hovers*/
+.Home:hover {
+  width: 105%;
+  height: 12%;
+  background: #f58b00;
+  -webkit-box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.Home:hover ul li a img {
+  opacity: 1;
+}
+
+.Perfil:hover {
+  width: 105%;
+  height: 12%;
+  background: #f58b00;
+  -webkit-box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.Perfil:hover ul li a img {
+  opacity: 1;
+}
+
+.Portfólio:hover {
+  width: 105%;
+  height: 12%;
+  background: #f58b00;
+  -webkit-box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.Portfólio:hover ul li a img {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

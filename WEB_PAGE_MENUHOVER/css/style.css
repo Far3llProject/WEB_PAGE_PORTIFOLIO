@@ -62,7 +62,7 @@ ul li a
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
-    overflow: hidden;
+    
     transition: 0.5s;
     z-index: 1;
 
@@ -91,7 +91,7 @@ ul li a:before
     background: linear-gradient(90deg, transparent,
      rgba(255,255,255,0.8), transparent);
     transform: skewX(35deg);
-    transition: 0s;
+    transition: 1s;
 }
 
 ul li a:Hover:before

@@ -1,0 +1,55 @@
+$headerColor:  #3c3c3c;
+$headerShadow: 15px 0px 15px rgba(0, 0, 0, 0.3);
+$purple : #ff8000;
+
+@mixin Menustyle 
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 12%;
+    background: #2d2d2d;
+    overflow: hidden;
+    transition: 0.5s;
+    
+}
+/*mudar de px par vh*/
+@mixin ImgMenuPosition 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    transition: 0.5s;
+    z-index: 1;
+    top: -3px;
+    
+}
+
+@mixin HoverMenuItem 
+{
+    width: 105%;
+    height: 12%;
+    background: #f58b00;
+    box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    ul li a img{
+        opacity: 1;
+    }
+    
+}
+
+@mixin buttonBG($bg) {
+    border: 2px solid $bg;
+    color: $bg;
+    &:hover {
+      background-color: $bg;
+      transition: all 0.3s ease-in-out;
+    }
+  }

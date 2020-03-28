@@ -1,0 +1,291 @@
+
+@import "./variaveis";
+@import "./header";
+
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+*{
+    width: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #1c1d37;
+    background: url(../img/fundo.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+.texthome
+{
+    position: relative;
+    top: 8em;
+    right: -30px;
+    width: 150vh;
+    height: 12vh;
+    z-index: -3;
+
+    h3{
+        top: -47px;
+        display: inline;
+        position: relative;
+        right: -200px;
+        text-transform: uppercase;
+        font-size: 2.5em;
+        color: white;
+        text-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    }
+    h1{
+        display: inline;
+        position: relative;
+        text-transform: uppercase;
+        font-size: 5.6em;
+        top: -39px;
+        color: white;
+        right: -197px;
+        text-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    }
+    p{
+        display: inline;
+        position: relative;
+        right: -200px;
+        text-transform: uppercase;
+        font-size: 2.6em;
+        top: -28px;
+        color: orange;
+        text-shadow: 10px 10px 8px rgba(0,0,0,0.8);
+    }
+   
+    
+}
+
+
+.copyright
+{
+    position: fixed;
+    width: 310px;
+    height: 22px;
+    top: 96vh;
+    right: 2vh;
+    z-index: 1;
+
+    p{
+        display: inline;
+        color: white;
+    }
+}
+  
+  .botao{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 97vh;
+    top: 9vh;
+    right: -39vh;
+    .skewBtn{
+      width: 180px;
+      height: 80px;
+      outline: none;
+      cursor: pointer;
+      background: none;
+      transition: .5s;
+      font-size: 24px;
+      border-radius: 5px;
+      font-family: "Lato",sans-serif;
+      &:hover{
+        border: none;
+        color: white;
+        font-size: 28px;
+        transform:scale(1.1);
+      }
+    }
+  
+  }
+  
+  /* Buttons */
+  .purple{
+    @include buttonBG($purple);
+  }
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/*Itens do Menu*/
+.Home
+{    
+        @include Menustyle();
+        
+        ul
+        {
+            li
+            {
+                list-style: none;
+                
+                a
+                {
+                text-decoration: none;
+                    img
+                    {
+                       @include ImgMenuPosition();
+                                            
+                    }
+                    h3{
+                        opacity: 0;
+                        transition: 0.6s;
+                        position: relative;
+                        top: -16px;
+                        right: 1.8em;
+                        text-transform: uppercase;
+                        font-size: 2.4vh;
+                    }
+                }
+            }
+        }
+}
+
+.Perfil
+{    
+    @include Menustyle();
+    
+    ul
+    {
+        
+        li
+        {
+            list-style: none;
+            a
+            {
+            text-decoration: none;
+                img
+                {
+                    @include ImgMenuPosition();   
+                }
+                h3{
+                    opacity: 0;
+                    transition: 0.6s;
+                    position: relative;
+                    top: -16px;
+                    right: 5vh;
+                    text-transform: uppercase;
+                    font-size: 2.4vh;
+                }
+            }
+        }
+    }
+}
+
+.Portfólio
+{    
+    @include Menustyle();
+    
+    ul
+    {
+        
+        li
+        {
+            list-style: none;
+            a
+            {
+            text-decoration: none;
+                img
+                {
+                    @include ImgMenuPosition();   
+                }
+                h3{
+                    opacity: 0;
+                    transition: 0.6s;
+                    position: relative;
+                    top: -16px;
+                    right: 8vh;
+                    text-transform: uppercase;
+                    font-size: 2.4vh;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/*Efeito Brilho*/
+
+.Home::before
+{
+    content: '';
+    align-items: center;
+    position: absolute;
+    left: -150px;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent,
+     rgba(255,255,255,0.8), transparent);
+    transform: skewX(35deg);
+    transition: 0s;
+}
+.Home:Hover:before
+{
+    left: calc(100% + 100px);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.Perfil::before
+{
+    content: '';
+    align-items: center;
+    position: absolute;
+    left: -150px;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent,
+     rgba(255,255,255,0.8), transparent);
+    transform: skewX(35deg);
+    transition: 0s;
+}
+.Perfil:Hover:before
+{
+    left: calc(100% + 100px);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.Portfólio::before
+{
+    content: '';
+    align-items: center;
+    position: absolute;
+    left: -150px;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent,
+     rgba(255,255,255,0.8), transparent);
+    transform: skewX(35deg);
+    transition: 0s;
+}
+.Portfólio:Hover:before
+{
+    left: calc(100% + 100px);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/*Hovers*/
+.Home:hover
+{
+    @include HoverMenuItem();
+}
+.Perfil:hover
+{
+    @include HoverMenuItem();
+}
+.Portfólio:hover
+{
+    @include HoverMenuItem();
+}

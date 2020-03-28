@@ -1,0 +1,57 @@
+.Header
+{
+    position: fixed;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $headerColor;
+    box-shadow: $headerShadow;
+    transition: 0.7s;
+    z-index: -2;
+ 
+}
+
+
+@media (max-width: 900px){
+ .Header{ background: #fff;}
+  
+}
+
+/* Hover Menu*/
+
+.Header:hover
+{ 
+    
+    width: 18vh;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #3c3c3c;
+
+    
+    .Home ul li a h3{
+       opacity: 1;
+       color: #fff;
+       letter-spacing: 0.1em;
+       text-transform: uppercase;
+      
+    }
+    .Perfil ul li a h3{
+        opacity: 1;
+        color: #fff;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+       
+     }
+
+     .Portfólio ul li a h3{
+        opacity: 1;
+        color: #fff;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+       
+     }
+            
+}
+
